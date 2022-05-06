@@ -1,0 +1,72 @@
+<a routerLink="/books">List sách</a>
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Chỉnh sửa sách</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a routerLink="/">Trang chủ</a></li>
+          <li class="breadcrumb-item active">Chỉnh sửa sách</li>
+        </ol>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- left column -->
+      <div class="col-12">
+        <!-- general form elements -->
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Chỉnh sửa sách</h3>
+          </div>
+          <!-- /.card-header -->
+          <!-- form start -->
+
+          <form [formGroup]="bookForm" (ngSubmit)="submitEdit()" style="margin-top: 20px">
+            <br>
+            <div class="form-group">
+              <label for="name"><h5>Tên sách</h5></label>
+              <input class="form-control" id="name" placeholder="Nhập tên sản phẩm" type="text"
+                     formControlName="title">
+
+
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="price"><h5>Tác giả</h5></label>
+              <input class="form-control" id="price" placeholder="Nhập giá sản phẩm" type="text"
+                     formControlName="author">
+
+            </div>
+            <br>
+
+            <div class="form-group">
+              <label for="description"><h5>Mô tả sách</h5></label>
+              <input class="form-control" id="description" placeholder="Nhập mô tả sản phẩm" type="text"
+                     formControlName="description">
+
+            </div>
+            <br>
+
+
+            <div style="margin-top: 20px">
+              <button class="btn btn-primary" type="submit">Edit</button>
+            </div>
+          </form>
+
+
+        </div>
+        <!-- /.card -->
+      </div>
+      <!--/.col (left) -->
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</section>
